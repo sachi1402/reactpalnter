@@ -65,7 +65,7 @@ function App() {
       {/* <h1>planter</h1> */}
       <Webcam ref= {camra} width="100%"   videoConstraints={{ facingMode: "environment"}}/>
       <div className="ccbtn">
-
+      {model == null &&<p>Loading...</p>}
       <div className="cbtn" width="100%" height="100%" onClick={e=>handleCam(e)}/>
       </div>
       {picSrc?<div className="plant">
@@ -80,7 +80,7 @@ function App() {
         </div>
 
       </div>:<div/>}
-      {/* {model != null &&<p>{model.name}</p>} */}
+      {/* {model == null &&<p>Loading...</p>} */}
       {/* {model != null &&<button onClick={()=>handlepredict(img)}>{model.name}</button>} */}
       {/* <img src="./testpic.JPG" ref={img} id ='img' alt='leaf'/> */}
     </div>
