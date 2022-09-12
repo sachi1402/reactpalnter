@@ -31,13 +31,7 @@ function App() {
     };
   }, [picSrc]);
 
-  // useEffect(() => {
-    
-  //   console.log("ca''",camraImg);
-  //    return () => {
-      
-  //   };
-  // }, [camraImg]);
+
   function  handlepredict(url){
     console.log(url);
     const example = tf.browser.fromPixels(url.current);
@@ -69,11 +63,11 @@ function App() {
       <div className="cbtn" width="100%" height="100%" onClick={e=>handleCam(e)}/>
       </div>
       {picSrc?<div className="plant">
-        <div style={{width: '70%', height: '70%' ,display:'flex',justifyContent: 'center',alignItems: 'center',flexDirection: 'column',position: 'relative'}}>
-        <img style={{borderRadius:'20px',position: 'relative',top:'100px'}} src={picSrc} ref={camraImg}  onClick={(e)=>handlepredict(camraImg)} id='snap' alt='snapshot'/>
+        <div style={{width: '100%', height: '70%' ,display:'flex',justifyContent: 'center',alignItems: 'center',flexDirection: 'column',position: 'relative'}}>
+        <img style={{borderRadius:'20px',position: 'relative',top:'100px'}} src={picSrc} ref={camraImg}  onLoad={(e)=>handlepredict(camraImg)} id='snap' alt='snapshot'/>
         <div style={{width: '90%', height: '70%' ,paddingTop:'150px', backgroundColor:'#eee',borderRadius:'20px',display:'flex',justifyContent: 'flex-start',alignItems: 'center',flexDirection: 'column'}}>
 
-        <h1 key={pred}>{pred?pred:'Analyzing Image ...'}</h1>
+        <h3 key={pred}>{pred?pred:'Analyzing Image ...'}</h3>
 
         <div style={{padding:'5px 50px',margin:'20px', backgroundColor:'rgb(65, 160, 238)',borderRadius:'20px',display:'flex',justifyContent: 'center',alignItems: 'center',cursor: 'pointer'}} onClick={(e)=>setpicSrc(null)}> <h3>Back</h3> </div>
         </div>
