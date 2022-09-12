@@ -45,7 +45,7 @@ function App() {
   return (
     <div className="App">
       <h1>planter</h1>
-      <Webcam ref= {camra} width="256px" high="256px"  onClick={e=>handleCam(e)}/>
+      <Webcam ref= {camra} width="256px" high="256px"  onClick={e=>handleCam(e)} videoConstraints={{ facingMode: "environment"}}/>
       {model != null &&<p>{model.name}</p>}
       {model != null &&<button onClick={()=>handlepredict(img)}>{model.name}</button>}
       <img src="./testpic.JPG" ref={img} id ='img' alt='leaf'/>
