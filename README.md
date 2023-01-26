@@ -1,70 +1,24 @@
-# Getting Started with Create React App
+Introduction
+This code is a simple implementation of a neural network using the Python library Tensorflow. The network is designed to classify images of handwritten digits (0-9) using the popular MNIST dataset.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Requirements
+Tensorflow 2.x
+Numpy
+Matplotlib (for visualizing results)
+Usage
+Clone or download the repository.
+Ensure that all necessary libraries are installed (listed in the "Requirements" section).
+Run the script using a command line interface or a Python IDE.
+The script will automatically download the MNIST dataset and begin training the model.
+The script will also provide visualizations of the model's performance during training, including accuracy and loss over time.
+The trained model will be saved in a file called "mnist_model.h5" in the project directory.
+Customization
+The script includes several parameters that can be modified to customize the model's behavior:
 
-## Available Scripts
+batch_size: the number of images to use in each training iteration.
+epochs: the number of times the model will iterate over the entire dataset during training.
+learning_rate: the rate at which the model will adjust its weights during training.
+By default these are set to batch_size=128, epochs=10 and learning_rate=0.001 respectively.
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Conclusion
+This code is intended to serve as a simple example of how to implement a neural network using Tensorflow. It can be modified and extended to solve other image classification problems or used as a starting point for a more complex machine learning project.
